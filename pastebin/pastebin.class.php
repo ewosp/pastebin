@@ -302,7 +302,7 @@ class Pastebin
 		if ($post)
 		{
 			//show a quick reference url, poster and parents
-			$post['posttitle']="Posté par {$post['poster']} le {$post['postdate']}";
+			$post['posttitle']="PostÃ© par {$post['poster']} le {$post['postdate']}";
 			
 			if ($post['parent_pid']>0)
 			{

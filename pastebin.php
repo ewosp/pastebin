@@ -92,7 +92,7 @@ if (isset($_POST['paste']))
 		}
 	}
 
-	echo "[!?] Mauvais calcul ou erreur dans la devinette. Faites précédent, copiez votre texte et recollez-le dans un nouveau formulaire.";
+	echo "[!?] Mauvais calcul ou erreur dans la devinette. Faites prÃ©cÃ©dent, copiez votre texte et recollez-le dans un nouveau formulaire.";
 
 }
 
@@ -107,7 +107,7 @@ if (isset($_GET['dl']))
 	if (!$pastebin->doDownload($pid))
 	{
 		//not found
-		echo "Le post n° $pid n'existe pas ou n'est plus disponible.";
+		echo "Le post nÂ° $pid n'existe pas ou n'est plus disponible.";
 	}
 	exit;
 }
@@ -170,7 +170,7 @@ if (isset($_POST['feedback']) && strlen($_POST['msg']))
 	}
 	else
 	{
-		$page['thankyou'] = "Euh, cela ressemble un peu trop à du spam, pouvez-vous éviter tous ces liens ?";
+		$page['thankyou'] = "Euh, cela ressemble un peu trop Ã  du spam, pouvez-vous Ã©viter tous ces liens ?";
 	}
 }
 
@@ -200,7 +200,7 @@ $page['title']=	$CONF['title'];
 //on a subdomain, label it as private...
 if (strlen($CONF['subdomain']))
 {
-	$page['title']=$CONF['subdomain']. ' :: pastebin privée :: ' . $page['title'] . '::';
+	$page['title']=$CONF['subdomain']. ' :: pastebin privÃ©e :: ' . $page['title'] . '::';
 }
 elseif ($page['current_format']!='text')
 {

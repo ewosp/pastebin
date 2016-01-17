@@ -187,9 +187,9 @@ function copyToClipboard(txt)
 		
 		catch (e)
 		{
-			var showhelp=confirm("Il n'a pas été possible d'accéder à votre presse-papier.\n\n"+
+			var showhelp=confirm("Il n'a pas Ã©tÃ© possible d'accÃ©der Ã  votre presse-papier.\n\n"+
 				e+"\n"+
-				"Voulez-vous accéder à l'aide afin d'activer cette fonctionnalité ?");
+				"Voulez-vous accÃ©der Ã  l'aide afin d'activer cette fonctionnalitÃ© ?");
 			if (showhelp)
 			{
 				document.location="/?help=1";
@@ -230,7 +230,7 @@ function initPastebin()
 		radio.onclick=function ()
 		{
 			var expiryinfo=document.getElementById('expiryinfo');
-			expiryinfo.innerHTML="Idéal pour IRC, MSN, Skype, ...";
+			expiryinfo.innerHTML="IdÃ©al pour IRC, MSN, Skype, ...";
 			
 			document.getElementById('expiry_day_label').className='current';
 			document.getElementById('expiry_month_label').className='';
@@ -243,7 +243,7 @@ function initPastebin()
 		radio.onclick=function ()
 		{
 			var expiryinfo=document.getElementById('expiryinfo');
-			expiryinfo.innerHTML="Convient pour les conversations par e-mail, les données temporaires";
+			expiryinfo.innerHTML="Convient pour les conversations par e-mail, les donnÃ©es temporaires";
 		
 			document.getElementById('expiry_day_label').className='';
 			document.getElementById('expiry_month_label').className='current';
@@ -255,7 +255,7 @@ function initPastebin()
 		radio.onclick=function ()
 		{
 			var expiryinfo=document.getElementById('expiryinfo');
-			expiryinfo.innerHTML="Archivage à long terme de portions de code utiles.";
+			expiryinfo.innerHTML="Archivage Ã  long terme de portions de code utiles.";
 		
 			document.getElementById('expiry_day_label').className='';
 			document.getElementById('expiry_month_label').className='';

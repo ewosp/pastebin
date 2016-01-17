@@ -23,7 +23,7 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
  
-echo "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>\n";
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -47,8 +47,8 @@ echo "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>\n";
 <div style="display:none;">
 <h1 style="display: none;">Pastebin :: outil de debug collaboratif et de copier/coller de long textes</h1>
 <p style="display: none;">Une pastebin est un utilitaire vous permettant de publier un code snippet (un extrait de code source), un rapport d'erreur, un long texte, ...lorsque vous chattez sur IRC, Skype, MSN, un forum, ...</p>
-<p style="display: none;">Ce site a éété développé en XHTML et CSS2. Apparemment, il semblerait que votre browser ne supporte pas ces technologies.
-Visitez <a href="http://www.webstandards.org/upgrade/" target="_blank">WaSP</a> pour mettre à jour !</p>
+<p style="display: none;">Ce site a Ã©Ã©tÃ© dÃ©veloppÃ© en XHTML et CSS2. Apparemment, il semblerait que votre browser ne supporte pas ces technologies.
+Visitez <a href="http://www.webstandards.org/upgrade/" target="_blank">WaSP</a> pour mettre Ã  jour !</p>
 </div>
 
 <div id="titlebar"><?php 
@@ -59,7 +59,7 @@ Visitez <a href="http://www.webstandards.org/upgrade/" target="_blank">WaSP</a> 
 	}
 	else
 	{
-		echo " <a href=\"{$CONF['this_script']}?help=1\">Qu'est-ce qu'une pastebin privée ?</a>";
+		echo " <a href=\"{$CONF['this_script']}?help=1\">Qu'est-ce qu'une pastebin privÃ©e ?</a>";
 	}
 	
 ?>
@@ -69,7 +69,7 @@ Visitez <a href="http://www.webstandards.org/upgrade/" target="_blank">WaSP</a> 
 
 <div id="menu">
 
-<h1>Posts récents</h1>
+<h1>Posts rÃ©cents</h1>
 <ul>
 <?php  
 	foreach($page['recent'] as $idx=>$entry)
@@ -89,7 +89,7 @@ Visitez <a href="http://www.webstandards.org/upgrade/" target="_blank">WaSP</a> 
 
 <!--
 <h1>Besoin d'aide ?</h1>
-<p>Notre canal IRC #Win et notre forum sont à votre disposition pour vous aider dans vos problèmes de prog, de serveurs (Windows, BSD, Linux), de réseaux, ... :</p>
+<p>Notre canal IRC #Win et notre forum sont Ã  votre disposition pour vous aider dans vos problÃ¨mes de prog, de serveurs (Windows, BSD, Linux), de rÃ©seaux, ... :</p>
 <ul>
 	<li><a href='http://chat.espace-win.org'>Rejoindre le chat</a></li>
 	<li><a href='http://www.espace-win.iorg/IRC/'>Le site de #Win</a></li>
@@ -103,15 +103,15 @@ if ($subdomain=='')
 ?>
 
 <h1>Sous-domaine gratuit</h1>
-<p>Vous voulez un sous-domaine pour votre communauté ?
-Il suffit d'indiquer l'url dans la barre d'adresse et hop, c'est créé.
+<p>Vous voulez un sous-domaine pour votre communautÃ© ?
+Il suffit d'indiquer l'url dans la barre d'adresse et hop, c'est crÃ©Ã©.
 <a href="<?php echo $CONF['this_script'].'?help=1' ?>">Consultez l'aide</a> pour plus d'informations.</p>
 	
 <?php 
 }
 ?>
 
-<h1>À propos</h1>
+<h1>Ã€ propos</h1>
 <p>Pastebin est un outil de debug collaboratif et de copier/coller de long textes, <a href="<?php echo $CONF['this_script'].'?help=1' ?>">consultez l'aide</a>
 pour plus d'informations.</p>
 
@@ -198,12 +198,12 @@ if (isset($_REQUEST["diff"]))
 			$page['posttitle']='';
 	
 			//echo "<div style=\"text-align:center;border:1px red solid;padding:5px;margin-bottom:5px;\">Diff feature is in BETA! If you have feedback, send it to lordelph at gmail.com</div>";
-			echo "<h1>Différences entre :<br/>- le nouveau post, n° <a href=\"".$pastebin->getPostUrl($newpost['pid'])."\">{$newpost['pid']}</a> par {$newpost['poster']}, le {$newpost['postdate']} et<br/>".
-				"- le post original, n° <a href=\"".$pastebin->getPostUrl($oldpost['pid'])."\">{$oldpost['pid']}</a> par {$oldpost['poster']}, le {$oldpost['postdate']}<br/>";
+			echo "<h1>DiffÃ©rences entre :<br/>- le nouveau post, nÂ° <a href=\"".$pastebin->getPostUrl($newpost['pid'])."\">{$newpost['pid']}</a> par {$newpost['poster']}, le {$newpost['postdate']} et<br/>".
+				"- le post original, nÂ° <a href=\"".$pastebin->getPostUrl($oldpost['pid'])."\">{$oldpost['pid']}</a> par {$oldpost['poster']}, le {$oldpost['postdate']}<br/>";
 			
 			echo "Afficher ";
-			echo "<a title=\"Ne pas afficher les lignes ajoutées ou modifiées\" style=\"padding:1px 4px 3px 4px;\" id=\"oldlink\" href=\"javascript:showold()\">la version originale</a> | ";
-			echo "<a title=\"Ne pas afficher les lignes supprimées de la version originale\" style=\"padding:1px 4px 3px 4px;\" id=\"newlink\" href=\"javascript:shownew()\">la nouvelle version</a> | ";
+			echo "<a title=\"Ne pas afficher les lignes ajoutÃ©es ou modifiÃ©es\" style=\"padding:1px 4px 3px 4px;\" id=\"oldlink\" href=\"javascript:showold()\">la version originale</a> | ";
+			echo "<a title=\"Ne pas afficher les lignes supprimÃ©es de la version originale\" style=\"padding:1px 4px 3px 4px;\" id=\"newlink\" href=\"javascript:shownew()\">la nouvelle version</a> | ";
 			echo "<a title=\"Afficher les insertions commes les suppressions\"  style=\"background:#880000;padding:1px 4px 3px 4px;\" id=\"bothlink\" href=\"javascript:showboth()\">les deux versions</a> ";
 			echo "</h1>";
 			
@@ -260,14 +260,14 @@ if (strlen($page['post']['posttitle']))
 		
 		if ($page['post']['parent_pid']>0)
 		{
-			echo "<a href=\"{$page['post']['parent_diffurl']}\" title=\"Comparer les différences\">Diff</a> | ";
+			echo "<a href=\"{$page['post']['parent_diffurl']}\" title=\"Comparer les diffÃ©rences\">Diff</a> | ";
 		} 
 		
-		echo "<a href=\"{$page['post']['downloadurl']}\" title=\"Télécharger le fichier\">Télécharger</a> | ";
+		echo "<a href=\"{$page['post']['downloadurl']}\" title=\"TÃ©lÃ©charger le fichier\">TÃ©lÃ©charger</a> | ";
 		
 		echo "<span id=\"copytoclipboard\"></span>";
 		
-		echo "<a href=\"/\" title=\"Créer un tout nouveau post\">Nouveau post</a>";
+		echo "<a href=\"/\" title=\"CrÃ©er un tout nouveau post\">Nouveau post</a>";
 		
 		echo "</h1>";
 }
@@ -276,7 +276,7 @@ if (isset($page['post']['pid']))
 	echo "<div class=\"syntax\">".$page['post']['codefmt']."</div>";
 	echo "<br /><b>Proposer une correction ou une modification du code ci-dessous
 	(<a href=\"{$CONF['this_script']}\">cliquez ici pour un nouveau post</a>)</b><br/>";
-	echo "Après avoir proposé votre modification, vous pourrez facilement voir les différences entre l'ancien et le nouveau post.";
+	echo "AprÃ¨s avoir proposÃ© votre modification, vous pourrez facilement voir les diffÃ©rences entre l'ancien et le nouveau post.";
 }	
 
 if (isset($_GET['help']))
@@ -284,41 +284,41 @@ if (isset($_GET['help']))
 	?>
 	<h1>Qu'est-ce qu'une pastebin ?</h1>
 	<p>Une pastebin est un utilitaire vous permettant de publier un code snippet (un extrait de code source), un rapport d'erreur, un long texte, ...</p>
-	<p>Si vous n'êtes pas familier avec ce concept, voyons comment les autres l'utilisent :</p>
+	<p>Si vous n'Ãªtes pas familier avec ce concept, voyons comment les autres l'utilisent :</p>
 	<ul>
 	<li><a href="/">publier</a> un fragment de code source afin d'obtenir une url comme http://<?= TOPDOMAIN ?>/1234</li>
-	<li>coller l'URL sur <a href='http://www.espace-win.org/IRC/'>IRC</a>, messagerie instantanée, ...</li>
-	<li>quelqu'un vous répond en lisant et peut-être en proposant une modification de votre code</li>
-	<li>vous pouvez alors voir les modifications, notre outil de diff peut même vous y aider</li>
+	<li>coller l'URL sur <a href='http://www.espace-win.org/IRC/'>IRC</a>, messagerie instantanÃ©e, ...</li>
+	<li>quelqu'un vous rÃ©pond en lisant et peut-Ãªtre en proposant une modification de votre code</li>
+	<li>vous pouvez alors voir les modifications, notre outil de diff peut mÃªme vous y aider</li>
 	</ul>
 	
-	<h1>Comment puis-je voir les différences entre deux posts ?</h1>
-	<p>Lorsque vous regardez un post, vous pouvez l'éditer. Cela <strong>crée un nouveau post</strong> avec cette particularité :
+	<h1>Comment puis-je voir les diffÃ©rences entre deux posts ?</h1>
+	<p>Lorsque vous regardez un post, vous pouvez l'Ã©diter. Cela <strong>crÃ©e un nouveau post</strong> avec cette particularitÃ© :
 	il contient un <strong>lien 'diff'</strong> qui vous permet de comparer l'ancienne et la nouvelle version.</p>
-	<p>C'est une fonctionnalité des plus puissantes pour repérer quelles lignes ont exactement été modifiées.</p>
+	<p>C'est une fonctionnalitÃ© des plus puissantes pour repÃ©rer quelles lignes ont exactement Ã©tÃ© modifiÃ©es.</p>
 	
-	<h1>Qu'est-ce qu'une pastebin privée et comment puis-je l'utiliser ?</h1>
-	<p>Vous disposez d'une pastebin privée simplement en pensant à un nom de domaine que personne
+	<h1>Qu'est-ce qu'une pastebin privÃ©e et comment puis-je l'utiliser ?</h1>
+	<p>Vous disposez d'une pastebin privÃ©e simplement en pensant Ã  un nom de domaine que personne
 	d'autre n'utilise, par exemple http://wazza.<?= TOPDOMAIN ?> ou http://projet-vifazur.<?= TOPDOMAIN ?>.
-	Tous les posts qui y seront effectués ne seront visibles que sur ce domaine, facilitant ainsi l'entraide,
-	la collaboration au sein d'un groupe d'utilisateurs sans le 'bruit' du service régulier de
+	Tous les posts qui y seront effectuÃ©s ne seront visibles que sur ce domaine, facilitant ainsi l'entraide,
+	la collaboration au sein d'un groupe d'utilisateurs sans le 'bruit' du service rÃ©gulier de
 	<a href="http://<?= TOPDOMAIN ?>">http://<?= TOPDOMAIN ?></a>.</p>
 
-	<p>Tout ce que vous avez à faire est de changer l'url dans votre browser pour créer ou accéder à une pastebin privé, ou simplement entrer ci-dessous le domaine que vous souhaitez :</p>
+	<p>Tout ce que vous avez Ã  faire est de changer l'url dans votre browser pour crÃ©er ou accÃ©der Ã  une pastebin privÃ©, ou simplement entrer ci-dessous le domaine que vous souhaitez :</p>
 	
 	<form method="get" action="<?php echo $CONF['this_script']?>">
 	<input type="hidden" name="help" value="1"/>
 	<p>Me rendre sur http://<input type="text" name="goprivate" value="<?php echo stripslashes($_GET['goprivate']) ?>" size="10"/>.<?= TOPDOMAIN ?>
 	<input type="submit" name="go" value="Go"/></p>
-	<?php if (isset($_GET['goprivate'])) { echo "<p>Merci de n'utiliser que des caractères alphanumériques (a-z, 0-9), des tirets ('-') ou des points ('.'). Le premier caractère doit obligatoirement être un lettre ou un chiffre.</p>"; } ?>
+	<?php if (isset($_GET['goprivate'])) { echo "<p>Merci de n'utiliser que des caractÃ¨res alphanumÃ©riques (a-z, 0-9), des tirets ('-') ou des points ('.'). Le premier caractÃ¨re doit obligatoirement Ãªtre un lettre ou un chiffre.</p>"; } ?>
 	</form>
 	
-	<p>Attention, il n'y a pas de protection par mot de passe, les sous-domaines sont accessibles par quiconque connaît l'URL (par contre nous ne publions pas la liste des domaines utilisés).</p>
+	<p>Attention, il n'y a pas de protection par mot de passe, les sous-domaines sont accessibles par quiconque connaÃ®t l'URL (par contre nous ne publions pas la liste des domaines utilisÃ©s).</p>
 	
 	<h1>Sous-domaines pour votre langage ...</h1>
 	
-	<p>Si un sous-domaine correspond au nom d'un language, la coloration syntaxique de ce langage sera appliquée par défaut.</p>
-	<p>Ainsi, si vous vous rendez sur tcl.<?= TOPDOMAIN ?>, vous verrez que TCL est sélectionné par défaut.</p>
+	<p>Si un sous-domaine correspond au nom d'un language, la coloration syntaxique de ce langage sera appliquÃ©e par dÃ©faut.</p>
+	<p>Ainsi, si vous vous rendez sur tcl.<?= TOPDOMAIN ?>, vous verrez que TCL est sÃ©lectionnÃ© par dÃ©faut.</p>
 	
 	<p><?php 
 	
@@ -334,16 +334,16 @@ if (isset($_GET['help']))
 		
 		?></p>
 	
-	<h1>Et c'est entièrement gratuit ?</h1>
+	<h1>Et c'est entiÃ¨rement gratuit ?</h1>
 	<p>En effet, et cela le restera. Ce service vous est offert par <a href='http://www.espace-win.org/'>Espace Win</a>.</p>
 	
 	<h1>Puis-je obtenir le code source ?</h1>
-	<p>pastebin est un logiciel PHP open source, diffusé sous licence GPL. Le code source (en anglais) est <a href='http://www.pastebin.com/pastebin.tar.gz'>librement téléchargable ici</a>.</p>
+	<p>pastebin est un logiciel PHP open source, diffusÃ© sous licence GPL. Le code source (en anglais) est <a href='http://www.pastebin.com/pastebin.tar.gz'>librement tÃ©lÃ©chargable ici</a>.</p>
 	
-	<h1>Où puis-je adresser mes commentaires ?</h1>
-	<p>Soit sur le canal #Win, soit en utilisant la fenêtre de feedback à gauche.</p>
-	<p>Pour joindre le développeur de pastebin, envoyez un e-mail à <script type="text/javascript">eval(unescape('%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%27%3c%61%20%68%72%65%66%3d%22%6d%61%69%6c%74%6f%3a%70%61%75%6c%40%65%6c%70%68%69%6e%2e%63%6f%6d%22%20%3e%50%61%75%6c%20%44%69%78%6f%6e%3c%2f%61%3e%27%29%3b'))</script>.</p>
-	<p>Pour signaler une erreur dans la traduction française, contactez Sébastien Santoro (Dereckson) via le fenêtre de feedback.</p>
+	<h1>OÃ¹ puis-je adresser mes commentaires ?</h1>
+	<p>Soit sur le canal #Win, soit en utilisant la fenÃªtre de feedback Ã  gauche.</p>
+	<p>Pour joindre le dÃ©veloppeur de pastebin, envoyez un e-mail Ã  <script type="text/javascript">eval(unescape('%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%27%3c%61%20%68%72%65%66%3d%22%6d%61%69%6c%74%6f%3a%70%61%75%6c%40%65%6c%70%68%69%6e%2e%63%6f%6d%22%20%3e%50%61%75%6c%20%44%69%78%6f%6e%3c%2f%61%3e%27%29%3b'))</script>.</p>
+	<p>Pour signaler une erreur dans la traduction franÃ§aise, contactez SÃ©bastien Santoro (Dereckson) via le fenÃªtre de feedback.</p>
 	
 	<?php
 }
@@ -381,12 +381,12 @@ foreach ($CONF['all_syntax'] as $code=>$name)
 </select><br/>
 <br/>
 
-Pour lutter contre le spam, hop un petit calcul simple et une devinette encore plus simple pour prouver que vous êtes un humain :<br />
+Pour lutter contre le spam, hop un petit calcul simple et une devinette encore plus simple pour prouver que vous Ãªtes un humain :<br />
 Quelle est la couleur du cheval blanc d'henri IV ? <input type="text" name="quux2" size=8 />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img align="top" src="verify.php" /><input type="text" name="quux" size=3 />
 <br /><br />
 
-Pour mettre en évidence certaines lignes, précedez chacune d'entre elles par <?php echo $CONF['highlight_prefix'] ?>.<br/>
+Pour mettre en Ã©vidence certaines lignes, prÃ©cedez chacune d'entre elles par <?php echo $CONF['highlight_prefix'] ?>.<br/>
 <textarea id="code" class="codeedit" name="code2" cols="80" rows="10" onkeydown="return catchTab(this,event)"><?php 
 echo htmlentities($page['post']['editcode']) ?></textarea>
 
@@ -396,7 +396,7 @@ echo htmlentities($page['post']['editcode']) ?></textarea>
 <input type="text" maxlength="24" size="24" id="poster" name="poster" value="<?php echo $page['poster'] ?>" />
 <input type="submit" name="paste" value="Send"/>
 <br />
-<input type="checkbox" name="remember" value="1" <?php echo $page['remember'] ?>/>Se souvenir de mes réglages
+<input type="checkbox" name="remember" value="1" <?php echo $page['remember'] ?>/>Se souvenir de mes rÃ©glages
 
 </div>
 
@@ -405,7 +405,7 @@ echo htmlentities($page['post']['editcode']) ?></textarea>
 
 
 <div id="expiryradios">
-<label>Combien de temps ce post doit-il être conservé ?</label><br/>
+<label>Combien de temps ce post doit-il Ãªtre conservÃ© ?</label><br/>
 
 <input type="radio" id="expiry_day" name="expiry" value="d" <?php if ($page['expiry']=='d') echo 'checked="checked"'; ?> />
 <label id="expiry_day_label" for="expiry_day">un jour</label>
@@ -414,7 +414,7 @@ echo htmlentities($page['post']['editcode']) ?></textarea>
 <label id="expiry_month_label" for="expiry_month">un mois</label>
 
 <input type="radio" id="expiry_forever" name="expiry" value="f" <?php if ($page['expiry']=='f') echo 'checked="checked"'; ?> />
-<label id="expiry_forever_label" for="expiry_forever">définitivement</label>
+<label id="expiry_forever_label" for="expiry_forever">dÃ©finitivement</label>
 </div>
 
 <div id="expiryinfo"></div>
